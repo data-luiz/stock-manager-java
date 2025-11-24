@@ -21,12 +21,12 @@ public class Program {
 
             int option = 0;
 
-            while (option != 4) {
+            while (option != 5) {
                 System.out.println();
                 System.out.println("1 - Show product data");
                 System.out.println("2 - Add products to stock");
                 System.out.println("3 - Remove products from stock");
-                System.out.println("4 - Rename product");
+                System.out.println("4 - Updated product");
                 System.out.println("5 - Exit");
                 System.out.println();
                 System.out.print("Choose an option: ");
@@ -45,10 +45,13 @@ public class Program {
                     product.removeProduct(removeQty);
                     System.out.println("Updated data: " + product);
                 } else if (option == 4) {
-                    System.out.println("Enter new product name: ");
                     sc.nextLine();
+                    System.out.print("Enter new product name: ");
                     String newName = sc.nextLine();
                     product.setName(newName);
+                    System.out.print("Enter new product price: ");
+                    double newPrice = sc.nextDouble();
+                    product.setPrice(newPrice);
                     System.out.println("Updated data: " + product);
                 } else if (option == 5) {
                     System.out.println("exiting the program");
