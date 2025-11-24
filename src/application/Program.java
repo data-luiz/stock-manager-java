@@ -43,7 +43,7 @@ public class Program {
                     System.out.print("Enter quantity to remove: ");
                     int removeQty = sc.nextInt();
                     product.removeProduct(removeQty);
-                    System.out.println("Updated data: " + product);
+                    System.out.println("Updated data: " + product.toString());
                 } else if (option == 4) {
                     sc.nextLine();
                     System.out.print("Enter new product name: ");
